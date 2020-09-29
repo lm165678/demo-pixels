@@ -1,0 +1,25 @@
+MaterialDef WangTileSet {
+
+    MaterialParameters {
+        // Texture2D DirtMap
+        // Texture2D GrassMap
+        TextureArray DirtTexture;
+    }
+
+    Technique {
+        VertexShader GLSL150:   Materials/BlocksSpriteSheet.vert
+        FragmentShader GLSL150: Materials/BlocksSpriteSheet.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            NormalMatrix
+            WorldViewMatrix
+            ViewMatrix
+            CameraPosition
+            WorldMatrix
+            Time
+        }
+
+    }
+
+}

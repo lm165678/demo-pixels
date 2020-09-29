@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.jayfella'
+version '1.0.0'
+
+mainClassName = "com.jayfella.pixels.Main"
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    jme_ver = "3.3.2-stable"
+    log4jVer = "1.2.17"
+    slf4jVer = "1.7.30"
+}
+
+dependencies {
+
+    // logging
+    implementation "log4j:log4j:$log4jVer"
+    implementation "org.slf4j:slf4j-api:$slf4jVer"
+    implementation "org.slf4j:jul-to-slf4j:$slf4jVer"
+    implementation "org.slf4j:slf4j-log4j12:$slf4jVer"
+
+    // jmonkey
+    implementation "org.jmonkeyengine:jme3-core:$jme_ver"
+    implementation "org.jmonkeyengine:jme3-desktop:$jme_ver"
+    implementation "org.jmonkeyengine:jme3-lwjgl:$jme_ver"
+
+    implementation "com.jayfella:jme-fastnoise:1.0.2"
+
+    // 2D physics
+    implementation "org.dyn4j:dyn4j:3.4.0"
+
+    // lemur
+    implementation "com.simsilica:lemur:1.14.0"
+    implementation "com.simsilica:lemur-props:1.1.1"
+    implementation "org.codehaus.groovy:groovy-all:3.0.5"
+
+}

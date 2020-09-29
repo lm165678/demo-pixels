@@ -1,0 +1,25 @@
+MaterialDef Unshaded {
+
+    MaterialParameters {
+        // Texture2D DirtMap
+        // Texture2D GrassMap
+        TextureArray DirtTextures;
+    }
+
+    Technique {
+        VertexShader GLSL150:   Materials/Blocks.vert
+        FragmentShader GLSL150: Materials/Blocks.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            NormalMatrix
+            WorldViewMatrix
+            ViewMatrix
+            CameraPosition
+            WorldMatrix
+            Time
+        }
+
+    }
+
+}
