@@ -93,7 +93,7 @@ public class Main extends SimpleApplication {
         viewPort.setBackgroundColor(new ColorRGBA(0.2f, 0.3f, 0.4f, 1.0f));
 
         Dyn4jAppState dyn4jAppState = new Dyn4jAppState();
-        dyn4jAppState.setDebugEnabled(false);
+        dyn4jAppState.setDebugEnabled(true);
         stateManager.attach(dyn4jAppState);
 
         cam.setLocation(new Vector3f(0, 0, 60));
